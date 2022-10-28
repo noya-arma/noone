@@ -2,8 +2,9 @@ import os
 import re
 
 import hikari
+access_token= os.environ["ACCESS_TOKEN"]
 
-bot = hikari.GatewayBot(token='MTAzNTQzNjU2Mzc2NjcwNjIwNg.GKpAjQ.-QCATffY9rfo71po72LKkEDzS5Ds-RD1FQfyiM')
+bot = hikari.GatewayBot(token=access_token)
 
 @bot.listen()
 async def on_message(event: hikari.GuildMessageCreateEvent) -> None:
